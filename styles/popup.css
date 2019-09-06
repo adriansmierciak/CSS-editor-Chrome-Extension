@@ -1,0 +1,37 @@
+body{
+    width: 200px;
+    padding: 5px 10px;
+}
+
+.click-me-btn{
+    cursor: pointer;
+    display: inline-block;
+    background: #00647d;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+.rest-text{
+    padding: 10px 3px 5px;
+    cursor: default;
+    color: darkslategrey;
+    font-size: 14px;
+}
+
+.logo{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text{
+    font-size: 24px;
+    font-family: cursive;
+    color: #005f5f;
+    font-weight: bold;
+}
+
+img{
+    margin-right: 15px;
+}

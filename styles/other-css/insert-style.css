@@ -1,0 +1,883 @@
+tag1204 {
+    display: block;
+    box-sizing: border-box;
+}
+
+.chrome-1204-edit-window {
+    box-shadow: 0 0 5px 3px #7b83aa;
+    width: 330px;
+    position: fixed !important;
+    top: 20px;
+    right: 40px;
+    z-index: 99999999999999999999999999999999999999999;
+    display: block;
+    opacity: 0;
+    -webkit-font-smoothing: unset !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition-timing-function: ease-in-out;
+}
+
+.chrome-1204-edit-window * {
+    -webkit-font-smoothing: unset !important;
+}
+
+.chrome-1204-edit-window-hidden {
+    opacity: 1;
+    display: none;
+}
+
+.chrome-1204-edit-window .chrome-1204-content {
+    background: #f4f5ff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: visible;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.chrome-1204-edit-window .chrome-1204-content .chrome-1204-header {
+    background: rgb(17, 47, 74);
+    display: flex;
+    font-family: cursive !important;
+    font-size: 14px;
+    min-height: 28px;
+    cursor: grab;
+    padding: 0 5px 0 15px;
+    max-height: 28px;
+    height: 28px;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.chrome-1204-edit-window .chrome-1204-content .chrome-1204-header .chrome-1204-title {
+    cursor: grab;
+    color: white;
+    font-size: 13px;
+}
+
+.chrome-1204-edit-window .chrome-1204-content .chrome-1204-header .chrome-1204-close-icon {
+    font-weight: bold;
+    padding: 0 5px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 10px;
+}
+
+.chrome-1204-edit-window .chrome-1204-content .chrome-1204-header .chrome-1204-maximize-icon {
+    font-weight: bold;
+    padding: 0 5px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 36px;
+}
+
+.chrome-1204-edit-window .chrome-1204-content .chrome-1204-header .chrome-1204-minimize-icon {
+    font-weight: bold;
+    padding: 0 5px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    font-size: 13px;
+    right: 65px;
+}
+
+.chrome-1204-edit-window .chrome-1204-content .chrome-1204-text {
+    padding: 5px 10px 10px;
+    font-family: serif !important;
+    font-size: 15px;
+    color: black;
+}
+
+.chrome-1204-edit-window .chrome-1204-content .chrome-1204-footer-wrapper {
+    margin: auto 0 0;
+}
+
+.chrome-1204-edit-window .chrome-1204-content .chrome-1204-footer-wrapper .chrome-1204-footer {
+    background: #eeeeee;
+    display: flex;
+    padding: 15px 15px 5px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.chrome-1204-edit-window .chrome-1204-content .chrome-1204-footer-wrapper .chrome-1204-footer .chrome-1204-footer-btn {
+    background: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #335b7d;
+    transition: all 0.3s;
+    width: 130px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.chrome-1204-edit-window .chrome-1204-content .chrome-1204-footer-wrapper .chrome-1204-footer .chrome-1204-resize-btn-clicked {
+    color: white;
+    background: steelblue;
+}
+
+.chrome-1204-edit-window .chrome-1204-content .chrome-1204-footer-wrapper .chrome-1204-footer .chrome-1204-footer-btn:hover {
+    color: white;
+    background: #99d27a;
+}
+
+.chrome-1204-edit-window .chrome-1204-content .chrome-1204-footer-wrapper .chrome-1204-author {
+    background: rgb(29, 67, 101);
+    color: white;
+    cursor: grab;
+    font-family: cursive !important;
+    font-size: 10px;
+    text-align: right;
+    padding: 2px 15px;
+}
+
+
+/*scroll bar styles*/
+.chrome-1204-edit-window ::-webkit-scrollbar {
+    width: 10px;
+}
+
+.chrome-1204-edit-window ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #cdcdcd;
+}
+
+.chrome-1204-edit-window ::-webkit-scrollbar-thumb {
+    background: #c6c6c6;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.chrome-1204-edit-window ::-webkit-scrollbar-thumb:hover {
+    background: #999999;
+}
+
+/*color picker styles*/
+.sp-container .sp-palette-container .sp-thumb-el {
+    border: none !important;
+    box-shadow: black 0 0 1px 0;
+    margin: 3px !important;
+}
+
+.sp-dd {
+    color: rgb(51, 91, 125);
+}
+
+.sp-container .sp-picker-container .sp-color {
+    border: none !important;
+    box-shadow: black 0 0 1px 0;
+}
+
+.sp-container .sp-picker-container .sp-hue {
+    border: none !important;
+    box-shadow: black 0 0 1px 0;
+}
+
+.chrome-1204-text .sp-preview {
+    box-shadow: black 0 0 1px 0;
+    border: none !important;
+    margin-right: 10px;
+    height: 15px;
+    margin-left: 5px;
+    width: 60%;
+}
+
+.chrome-1204-text .sp-replacer {
+    background-color: #c3d6f0 !important;
+    box-shadow: none;
+    color: beige;
+    padding: 4px;
+    width: 88px;
+    transition: color .4s;
+    display: flex;
+    align-items: center;
+    border: 1px solid white !important;
+    box-sizing: border-box;
+    height: 30px;
+}
+
+.sp-container {
+    background-color: #c3d6f0 !important;
+    border: none !important;
+    box-shadow: black 0 0 1px 0;
+    z-index: 99999999999999999999999999999999999999 !important;
+}
+
+/*dodaje outline na zaznaczony element przy wyborze*/
+.chrome-1204-outline-selected {
+    outline: 2.5px dashed #2e7abb !important;
+    cursor: pointer !important;
+}
+
+.chrome-1204-no-outline {
+    outline: none !important;
+}
+
+/*font-size-change*/
+.chrome-1204-font-size-button {
+    background: dodgerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: beige;
+    font-weight: bold;
+    padding: 5px;
+    min-height: 30px;
+    min-width: 30px;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 5px;
+    background: linear-gradient(rgb(74, 106, 134) 0%, #6c809c 100%);
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.chrome-1204-actual-font-size {
+    cursor: default;
+    width: 50px;
+    background: rgb(0, 150, 136);
+    font-size: 13px;
+}
+
+/*padding-value*/
+.chrome-1204-padding-value-wrapper {
+    display: flex;
+}
+
+.chrome-1204-padding-value {
+    width: 60px;
+    padding: 5px;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background: rgb(0, 150, 136);
+    font-family: sans-serif !important;
+    color: beige;
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+/*padding-add-buttons*/
+.chrome-1204-padding-add {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chrome-1204-padding-button {
+    background: lightskyblue;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 50%;
+    background: linear-gradient(rgb(74, 106, 134) 0%, #6c809c 100%);
+    color: beige;
+    font-weight: bold;
+    user-select: none;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+/*margin-value*/
+.chrome-1204-margin-value-wrapper {
+    display: flex;
+}
+
+.chrome-1204-margin-value {
+    background: rgb(0, 150, 136);
+    width: 60px;
+    padding: 5px;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+
+    font-family: sans-serif !important;
+    color: beige;
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+/*margin-add-buttons*/
+.chrome-1204-margin-add {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chrome-1204-margin-button {
+    background: lightskyblue;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 50%;
+    background: linear-gradient(rgb(74, 106, 134) 0%, #6c809c 100%);
+    color: beige;
+    font-weight: bold;
+    user-select: none;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+/*color and size wrapper*/
+.chrome-1204-color-size-wrapper {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+
+/*text color*/
+.chrome-1204-color-picker-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-right: 10px;
+}
+
+
+/*text size*/
+.chrome-1204-font-size-changer-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    width: 50%;
+}
+
+
+/*font-style-change*/
+.chrome-1204-font-style-changer {
+    display: flex;
+    width: 50%;
+    padding-right: 10px;
+    flex-direction: column;
+}
+
+.chrome-1204-font-style-change-button {
+    background: red;
+    width: 30px;
+    display: flex;
+    color: beige;
+    font-weight: bold;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    background: linear-gradient(rgb(74, 106, 134) 0%, #6c809c 100%);
+    border: 1px solid white;
+    user-select: none;
+    cursor: pointer;
+}
+
+.chrome-1204-font-style-change-button-active {
+    background: #60bd20;
+    color: white;
+}
+
+/*text change*/
+.chrome-1204-text-changer-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.chrome-1204-text-change {
+    height: 90px;
+    resize: none;
+    padding: 5px;
+    background: #e7f2ff;
+    color: #2c2c2c;
+    outline: none;
+    border: 1px solid white;
+}
+
+/*common text styles*/
+.chrome-1204-common-text {
+    font-weight: bold;
+    font-family: monospace !important;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    /*text-decoration: underline;*/
+}
+
+/*common text mini styles*/
+.chrome-1204-common-text-mini {
+    font-size: 11px;
+    font-family: unset !important;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+    letter-spacing: 1px;
+    padding-left: 5px;
+}
+
+/*accordion-styles*/
+.chrome-1204-accordion .ui-accordion-header {
+    background: rgb(142, 190, 189);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 20px 8px !important;
+    margin-top: 5px !important;
+    font-size: 11px !important;
+    font-family: unset !important;
+}
+
+.chrome-1204-accordion .ui-accordion-header-icon {
+    display: none;
+}
+
+.chrome-1204-accordion .ui-accordion-content {
+    background: rgb(17, 47, 74);
+    margin-right: 1px;
+    margin-left: 1px;
+    border: none;
+    border-top: 2px solid #f4f5ff !important;
+}
+
+.ui-accordion-content.ui-corner-bottom.ui-helper-reset.ui-widget-content {
+    padding: 10px;
+}
+
+.chrome-1204-size-buttons-wrapper {
+    display: flex;
+}
+
+.chrome-1204-align-btn {
+    background: lightgreen;
+    width: 30px;
+    display: flex;
+    color: beige;
+    font-weight: bold;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    background: linear-gradient(rgb(74, 106, 134) 0%, rgb(108, 128, 156) 100%);
+    border: 1px solid white;
+    user-select: none;
+    cursor: pointer;
+}
+
+.chrome-1204-align-buttons-wrapper {
+    display: flex;
+}
+
+.chrome-1204-align-btn-active {
+    background: #60bd20;
+}
+
+.chrome-1204-style-align-wrapper {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.chrome-1204-text-align-wrapper {
+    width: 50%;
+    padding-left: 10px;
+}
+
+.chrome-1204-font-style-buttons-wrapper {
+    display: flex;
+}
+
+/*padding*/
+.chrome-1204-padding-buttons-common {
+    display: flex;
+    width: 60px;
+    margin-bottom: 3px;
+}
+
+.chrome-1204-padding-input {
+    margin-bottom: 5px;
+    background: #e7f2ff;
+    border: 1px solid white;
+    outline: none;
+    font-size: 17px !important;
+    font-weight: bold;
+    padding: 0 10px;
+    color: #01508c;
+    width: 33px;
+    font-family: cursive !important;
+    box-sizing: content-box;
+    height: 26px;
+}
+
+.chrome-1204-padding-edit-wrapper {
+    margin-bottom: 15px;
+}
+
+.chrome-1204-padding-top-plus {
+    margin-right: 2px;
+}
+
+.chrome-1204-padding-top-minus {
+    margin-left: 2px;
+}
+
+.chrome-1204-padding-bottom-plus {
+    margin-right: 2px;
+}
+
+.chrome-1204-padding-bottom-minus {
+    margin-left: 2px;
+}
+
+.chrome-1204-padding-left-plus {
+    margin-right: 2px;
+}
+
+.chrome-1204-padding-left-minus {
+    margin-left: 2px;
+}
+
+.chrome-1204-padding-right-plus {
+    margin-right: 2px;
+}
+
+.chrome-1204-padding-right-minus {
+    margin-left: 2px;
+}
+
+/*margin*/
+.chrome-1204-margin-buttons-common {
+    display: flex;
+    width: 60px;
+    margin-bottom: 3px;
+}
+
+.chrome-1204-margin-input {
+    margin-bottom: 5px;
+    background: #e7f2ff;
+    border: 1px solid white;
+    outline: none;
+    font-size: 17px !important;
+    font-weight: bold;
+    padding: 0 10px;
+    color: #01508c;
+    width: 33px;
+    font-family: cursive !important;
+    box-sizing: content-box;
+    height: 26px;
+}
+
+.chrome-1204-margin-top-plus {
+    margin-right: 2px;
+}
+
+.chrome-1204-margin-top-minus {
+    margin-left: 2px;
+}
+
+.chrome-1204-margin-bottom-plus {
+    margin-right: 2px;
+}
+
+.chrome-1204-margin-bottom-minus {
+    margin-left: 2px;
+}
+
+.chrome-1204-margin-left-plus {
+    margin-right: 2px;
+}
+
+.chrome-1204-margin-left-minus {
+    margin-left: 2px;
+}
+
+.chrome-1204-margin-right-plus {
+    margin-right: 2px;
+}
+
+.chrome-1204-margin-right-minus {
+    margin-left: 2px;
+}
+
+/*image input*/
+.chrome-1204-img-input-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chrome-1204-img-changer-input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.chrome-1204-img-changer-label {
+    background: linear-gradient(rgb(74, 106, 134) 0%, #6c809c 100%);
+    border: 1px solid white;
+    color: beige;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: unset !important;
+    padding: 7px 17px;
+    margin: 0;
+    border-radius: 3px;
+}
+
+.chrome-1204-img-changer-btn {
+    background: rgb(0, 150, 136);
+    border: 1px solid white;
+    color: beige;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: unset !important;
+    padding: 7px 17px;
+    border-radius: 3px;
+}
+
+/*background changer*/
+.chrome-1204-background-changer-wrapper {
+    margin-bottom: 10px;
+}
+
+/*size edit*/
+.chrome-1204-height-width-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chrome-1204-size-mini-wrapper {
+
+}
+
+.chrome-1204-height-input {
+    width: 100px !important;
+
+}
+
+.chrome-1204-width-input {
+    width: 100px !important;
+}
+
+.chrome-1204-height-width-input {
+    margin-bottom: 5px;
+    background: #e7f2ff;
+    border: 1px solid white;
+    outline: none;
+    padding: 0 10px;
+    color: #01508c;
+    box-sizing: content-box;
+    height: 26px;
+    font-family: serif !important;
+    font-weight: normal;
+    font-size: 15px !important;
+}
+
+/*position i display select*/
+.chrome-1204-position-display-wrapper select {
+    width: 115px !important;
+    border: 2px solid white !important;
+    outline: none;
+    color: rgb(1, 80, 140) !important;
+    background: rgb(231, 242, 255) !important;
+    font-family: serif !important;
+    font-size: 15px !important;
+
+}
+
+.chrome-1204-position-display-wrapper {
+    display: flex;
+}
+
+.chrome-1204-position-wrapper {
+    width: 50%;
+    padding-right: 10px;
+}
+
+.chrome-1204-display-wrapper {
+    width: 50%;
+    padding-left: 10px;
+}
+
+/*minimalizacja i maxymalizacja okna*/
+.chrome-1204-minimized {
+    height: 28px;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.chrome-1204-mini-maxi-transition {
+    transition: all 0.5s;
+}
+
+.chrome-1204-minimized .chrome-1204-content {
+    overflow: hidden;
+}
+
+.chrome-1204-minimize-width {
+    width: 200px;
+}
+
+.chrome-1204-show-clicked-element {
+    transition: all 0.7s;
+}
+
+.chrome-1204-show-clicked-element-2 {
+    background-color: rgba(255, 0, 15, 0.15) !important;
+    transform: scale(1.02) !important;
+}
+
+/*generate styles window*/
+.chrome-1204-css-window {
+    position: fixed !important;
+    transition: opacity 0.7s, top 0.7s, left 0.7s, transform 0.7s;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    width: 300px;
+    opacity: 0.4;
+    z-index: 999999999999999999999999999999999999999999;
+    display: block;
+    border-radius: 5px;
+    -webkit-font-smoothing: unset !important;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgb(17, 47, 74);
+    border: 1px solid #d6d6d6;
+    padding: 10px 0;
+    transition-timing-function: ease-in-out;
+}
+
+.chrome-1204-css-window-visible {
+    opacity: 1;
+    top: 20px !important;
+    left: 50% !important;
+    transform: translate(-50%, 0) scale(1);
+}
+
+.chrome-1204-css-box {
+    background: rgb(142, 190, 189);
+    color: white;
+    padding: 10px 15px;
+}
+
+.chrome-1204-css-text {
+    font-family: monospace !important;
+    font-size: 13px;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+}
+
+.chrome-1204-copy-css, .chrome-1204-close-css-window {
+    background: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #335b7d;
+    transition: all 0.3s;
+    width: 110px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.chrome-1204-copy-css:hover, .chrome-1204-close-css-window:hover {
+    color: white;
+    background: #99d27a;
+}
+
+.chrome-1204-css-buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px 0 7px;
+}
+
+.chrome-1204-hidden-input {
+    opacity: 0 !important;
+    z-index: -20 !important;
+    position: absolute !important;
+    top: 0 !important;
+}
+
+/*edit window themes*/
+
+/*orange theme*/
+
+.chrome-1204-light-theme .chrome-1204-header, .chrome-1204-light-theme .chrome-1204-author {
+    background: #FF9800 !important;
+}
+
+.chrome-1204-light-theme .ui-accordion-header {
+    background: #a2abb7;
+}
+
+.chrome-1204-light-theme .chrome-1204-css-window {
+    background: #FF9800 !important;
+}
+
+.chrome-1204-light-theme .chrome-1204-css-box {
+    background: #a2abb7;
+}
+
+.chrome-1204-light-theme .chrome-1204-footer-btn:hover, .chrome-1204-light-theme .chrome-1204-copy-css:hover, .chrome-1204-light-theme .chrome-1204-close-css-window:hover {
+
+    background: #ffc835 !important;
+}
+
+/*kopi theme*/
+
+.chrome-1204-kopi-theme .chrome-1204-header, .chrome-1204-kopi-theme .chrome-1204-author {
+    background: #222a58 !important;
+}
+
+.chrome-1204-kopi-theme .ui-accordion-header {
+    background: #eac8ce;
+}
+
+.chrome-1204-kopi-theme .chrome-1204-css-window {
+    background: #222a58 !important;
+}
+
+.chrome-1204-kopi-theme .chrome-1204-css-box {
+    background: #eac8ce;
+}
+
+.chrome-1204-kopi-theme .chrome-1204-footer-btn:hover, .chrome-1204-kopi-theme .chrome-1204-copy-css:hover, .chrome-1204-kopi-theme .chrome-1204-close-css-window:hover {
+    background: #a1c1de !important;
+}
+
+/*edit window bigger font size*/
+
+.chrome-1204-big-font-size .ui-accordion-header {
+    font-size: 14px !important;
+}
+
+.chrome-1204-big-font-size .chrome-1204-footer-btn, .chrome-1204-big-font-size .chrome-1204-copy-css, .chrome-1204-big-font-size .chrome-1204-close-css-window {
+    font-size: 14px !important;
+}
+
+.chrome-1204-big-font-size .chrome-1204-common-text {
+    font-size: 16px !important;
+}
+
+.chrome-1204-big-font-size .chrome-1204-common-text-mini {
+    font-size: 13px !important;
+}
+
+.chrome-1204-big-font-size .chrome-1204-css-text{
+    font-size: 15px !important;
+}
+
